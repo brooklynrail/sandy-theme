@@ -1,5 +1,6 @@
-# Theme for cometogethersandy.com (also at alternate host, survivingsandy.me)
+# Theme for cometogethersandy.com
 
+- Also available at alternate host, survivingsandy.me
 - Wordpress
 
 ## plugins used by cometogethersandy.com
