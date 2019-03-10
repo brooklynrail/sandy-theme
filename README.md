@@ -54,3 +54,9 @@ Version 1.0.10 | By Delicious Brains
 Very fast caching plugin for WordPress.
 
 Version 1.6.4 | By Automattic
+
+### Wordfence Security
+
+Wordfence Security - Anti-virus, Firewall and Malware Scan
+
+Version 7.2.3 | By Wordfence
