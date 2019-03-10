@@ -1,4 +1,4 @@
-# Theme for cometogethersandy.com
+# cometogethersandy.com
 
 - Also available at alternate host, survivingsandy.me
 - Wordpress
