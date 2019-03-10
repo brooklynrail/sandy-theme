@@ -3,7 +3,7 @@
 - Also available at alternate host, survivingsandy.me
 - Wordpress
 
-## plugins used by cometogethersandy.com
+## Plugins used by cometogethersandy.com
 
 All were able to be updated along with WP 5.1
 
