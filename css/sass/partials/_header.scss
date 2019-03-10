@@ -1,0 +1,100 @@
+//
+// Header
+//
+
+header {
+  padding-top: 27px;
+  margin-bottom: 60px;
+  nav {
+    width: 75%;
+  }
+}
+
+.menu-header {
+  li {
+    display: inline;
+    margin-right: 5px;
+    a:after {
+      @extend %sans-outline;
+      content: ',';
+    }
+    &:last-child {
+      a:after {
+        content: '';
+      }
+    }
+  }
+
+  .active,
+  .current-menu-item,
+  .current-page-item,
+  .current-page-ancestor {
+    a {
+      @extend %sans-outline-fill;
+    }
+  }
+}
+
+body.tag {
+  #{$topics-menu-item} a {
+    @extend %sans-outline-fill;
+  }
+}
+
+body.search {
+  #{$search-menu-item} a {
+    @extend %sans-outline-fill;
+  }
+}
+
+.search-wrapper {
+  display: none;
+  overflow: hidden;
+
+  .search-input-wrapper {
+    margin-top: 40px;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+    position: relative;
+  }
+
+  input {
+    width: 100%;
+    background: transparent;
+    border: 0;
+    margin: 12px 0 6px;
+
+    &:focus {
+      outline: 0;
+    }
+  }
+}
+
+.relevanssi-query-term {
+  background: $yellow;
+  padding: 6px 0 2px;
+}
+
+// Daves live search results
+
+.search_results {
+  position: absolute;
+  background: $background-color;
+  border-bottom: 1px solid #000;
+  width: calc(100% - 80px);
+  margin-top: 20px;
+  padding-bottom: 5px;
+
+  li {
+    list-style: none;
+  }
+
+  .search_footer {
+    display: none;
+  }
+}
+
+.search_results_activity_indicator {
+  margin-top: -5px;
+  margin-left: -45px;
+}

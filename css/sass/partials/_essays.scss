@@ -1,0 +1,145 @@
+.post .entry-content {
+  .quote-source {
+    // margin-left: 2px;
+    // margin-right: 0;
+  }
+}
+
+.single {
+  header {
+    @extend %visuallyhidden;
+  }
+}
+
+.essay-home-title {
+  margin-bottom: 15px;
+}
+
+.essay-info {
+  margin-bottom: 60px;
+}
+
+.author {
+  margin-left: 60px;
+  margin-bottom: 15px;
+}
+
+.blockquote-regular {
+  margin: 1em 60px;
+}
+
+.citation {
+  margin: 50px 60px 0;
+  font-size: 12px;
+  line-height: 16px;
+  border-top: 1px solid #000;
+
+  ul,
+  ol {
+    padding-left: 0;
+    list-style: none;
+    counter-reset: sandy-counter;
+    li {
+      &:before {
+        content: counter(sandy-counter);
+        counter-increment: sandy-counter;
+        margin-right: 1.25em;
+      }
+    }
+  }
+}
+
+.single-image,
+.wp-caption {
+  max-width: 100%;
+}
+
+.single-image {
+  padding: 50px 60px;
+}
+
+.single-image,
+.two-images {
+  p {
+    text-indent: 0;
+  }
+
+  a {
+    display: block;
+  }
+
+  a:active {
+    margin: 2px -2px 0 2px;
+    & + .wp-caption-text {
+      margin-top: 10px;
+      margin-left: 2px;
+      margin-bottom: -2px;
+    }
+  }
+}
+
+.two-images {
+  @extend %ibfix;
+  padding: 50px 0;
+  text-align: center;
+  white-space: nowrap;
+
+  a:first-of-type { margin-right: 10px; }
+  a:last-of-type { margin-left: 10px; }
+
+  a,
+  img {
+    @extend %ib;
+  }
+}
+
+.wp-caption-text {
+  @extend %font-tiny;
+  margin-top: 10px;
+}
+
+blockquote {
+  @extend %sans;
+  @extend %font-large;
+  border-top: 1px solid;
+  margin: 50px 60px;
+  padding-top: 10px;
+
+  &:first-child {
+    margin-top: 10px;
+  }
+
+  // &:before { content: open-quote; }
+  // &:after { content: close-quote; }
+
+  p {
+    display: inline;
+  }
+}
+
+.section-title {
+  // This assumes the span is a citation number
+  span {
+    @extend %serif;
+    margin-left: 10px;
+  }
+}
+
+.quote-source {
+  text-align: left;
+  margin: -50px 60px 50px;
+  text-indent: 0;
+
+  & + p:not(.quote-source) {
+    text-indent: 0;
+  }
+}
+
+.columns {
+  column-count: 2;
+  column-gap: 40px;
+
+  & + .columns {
+    margin-top: 80px;
+  }
+}

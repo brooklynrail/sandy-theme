@@ -1,0 +1,110 @@
+//
+// Extends
+//
+
+%serif {
+  font-family: 'plantin', times, serif;
+}
+
+%sans {
+  font-family: 'FranklinGothicMedCd', arial, sans-serif;
+}
+
+%sans-outline {
+  @extend %sans;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1.2px;
+  -webkit-text-stroke-color: black;
+  .no-textstroke & {
+    color: $gray;
+  }
+}
+
+%sans-outline-fill {
+  -webkit-text-fill-color: black;
+  -webkit-text-stroke-width: 0;
+  -webkit-text-stroke-color: transparent;
+  .no-textstroke & {
+    color: #000;
+  }
+}
+
+%font-tiny {
+  font-size: $font-tiny;
+  line-height: 16px;
+  letter-spacing: 1.6px;
+}
+
+%font-small {
+  font-size: $font-small;
+}
+
+%font-regular {
+  font-size: $font-regular;
+}
+
+%font-medium {
+  font-size: $font-medium;
+  line-height: 1em;
+}
+
+%font-large {
+  font-size: $font-large;
+  line-height: 1em;
+}
+
+%font-huge {
+  font-size: $font-huge;
+  line-height: 0.95em;
+  @media only screen and (max-width: 800px) {
+    font-size: $font-large;
+  }
+}
+
+%link {
+  color: #000;
+  text-decoration: none;
+  &:hover {
+    @extend %link-active;
+  }
+}
+
+%link-active {
+  border-bottom: 1px solid;
+  color: #000;
+  text-decoration: none;
+}
+
+%ibfix {
+  font-size: 0;
+  letter-spacing: 0;
+}
+
+%ib {
+  display: inline-block;
+  font-size: $font-regular;
+  letter-spacing: normal;
+}
+
+%regular {
+  font-size: $font-regular;
+  letter-spacing: normal;
+}
+
+%visuallyhidden {
+  @extend .visuallyhidden;
+}
+
+%clearfix {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+  & {
+    *zoom: 1;
+  }
+}

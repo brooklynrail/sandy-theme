@@ -1,0 +1,122 @@
+@media only screen and (max-width: 800px) {
+  header,
+  footer,
+  .content-padding,
+  .search-term,
+  .index-wrapper,
+  .page-entry-content,
+  .search-term,
+  .topics-page-wrapper {
+    padding: 15px;
+  }
+
+  header {
+    nav {
+      width: 100%;
+    }
+  }
+
+  .single-image {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .search-term {
+    margin-bottom: 0;
+  }
+
+  .index-header,
+  .index-view {
+    display: none;
+  }
+
+  .index-body {
+    border-top: 1px solid #000;
+    padding-top: 15px;
+  }
+
+  .index-wrapper .column {
+    width: 100% !important;
+    display: block;
+    &.column-essay,
+    &.column-topic {
+      margin-top: 15px;
+    }
+    &.column-topic {
+      a {
+        float: none;
+        display: block;
+      }
+    }
+
+    &.column-artist {
+      &:before {
+        content: 'Artist: ';
+        display: block;
+        font-style: italic;
+      }
+    }
+    &.column-author {
+      &:before {
+        content: 'Author: ';
+        display: block;
+        font-style: italic;
+      }
+    }
+    &.column-essay {
+      &:before {
+        content: 'Title: ';
+        display: block;
+        font-style: italic;
+      }
+    }
+    &.column-topic {
+      &:before {
+        content: 'Topics: ';
+        display: block;
+        font-style: italic;
+      }
+    }
+  }
+
+  .close-button {
+    top: 15px;
+    right: 15px;
+  }
+
+  .topics-wrapper {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .author {
+    margin-left: 0;
+  }
+
+  .page-entry-content {
+    padding: 0 0 40px;
+  }
+
+  .columns {
+    column-count: 1;
+    column-gap: 0;
+  }
+
+  footer {
+    padding-top: 40px;
+    .column {
+      max-width: none;
+      width: 100%;
+      margin-left: 0 !important;
+      display: block;
+      margin-bottom: 40px;
+    }
+  }
+}
+
+@media print,
+  (-o-min-device-pixel-ratio: 5/4),
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */
+}

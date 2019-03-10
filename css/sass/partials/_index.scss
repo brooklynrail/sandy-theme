@@ -1,0 +1,130 @@
+//
+// Artist and index pages
+//
+
+.index-view {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  span {
+    margin-left: 10px;
+    color: $gray;
+    cursor: pointer;
+  }
+  .active {
+    border: 1px solid #000;
+    padding: 7px 8px 4px;
+    box-shadow: 4px 4px 0 #000;
+    color: #000;
+  }
+}
+
+.index-wrapper {
+  @extend %ibfix;
+  padding-bottom: 5px;
+  .column {
+    @extend %ib;
+    width: 20%;
+    &.column-essay {
+      width: 40%;
+    }
+  }
+}
+
+.index-list-wrapper {
+  .column {
+    &.column-essay {
+      width: 60%;
+    }
+  }
+
+  .index-row {
+    a {
+      margin-left: $indent;
+      text-indent: -$indent;
+      display: inline-block;
+    }
+  }
+}
+
+.index-preview-wrapper {
+  .index-body {
+    .index-row {
+      border-bottom: 1px solid #000;
+      padding-bottom: 11px;
+      margin-bottom: 13px;
+
+      &:last-child {
+        border: 0;
+        padding-bottom: 0;
+        margin-bottom: 0;
+      }
+    }
+
+    .column-topic {
+      a {
+        display: inline-block;
+        clear: both;
+        float: left;
+        margin-left: $indent;
+        text-indent: -$indent;
+      }
+    }
+  }
+
+}
+
+.column-essay-post-link {
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.index-header {
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  padding: 11px 0 6px;
+  margin-bottom: 14px;
+  span {
+    cursor: pointer;
+  }
+  .active {
+    &:before {
+      content: '';
+      width: 8px;
+      height: 8px;
+      background: #000;
+      border-radius: 50%;
+      display: inline-block;
+      margin-right: 5px;
+    }
+  }
+}
+
+.show-bullet {
+  &:before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: #000;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 5px;
+  }
+}
+
+.index-body {
+  border-bottom: 1px solid #000;
+  padding-bottom: 9px;
+  .column {
+    padding-right: 40px;
+  }
+  a {
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.search-term {
+  margin-bottom: 20px;
+}

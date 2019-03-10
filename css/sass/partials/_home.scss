@@ -1,0 +1,52 @@
+//
+// Home
+//
+
+$brick-trans: .3s;
+$brick-easing: cubic-bezier(0.165, 0.84, 0.44, 1);
+$brick-border-size: 7px;
+
+.brick-wrapper {
+  @extend %ibfix;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.brick-row {
+  position: relative;
+  &:nth-child(even){
+    text-align: right;
+    margin-left: 100px;
+  }
+}
+
+.brick-info {
+  text-align: center;
+  padding: 20px;
+  transition: border-top 0.2s;
+
+  div {
+    @extend %font-tiny;
+  }
+}
+
+.brick {
+  @extend %ib;
+  margin: 0 10px 70px 10px;
+  position: relative;
+  text-align: left;
+  background: $background-color;
+  outline: 1px solid $background-color;
+  transition: outline 0.4s;
+
+  &:hover {
+    outline: 1px solid #000;
+    .brick-info {
+      // border-top: 1px solid #000;
+    }
+  }
+
+  &:active {
+    margin: 2px 8px 68px 12px;
+  }
+}

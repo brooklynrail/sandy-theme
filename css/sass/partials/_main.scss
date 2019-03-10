@@ -1,0 +1,108 @@
+//
+// Main
+//
+
+header,
+footer,
+.content-padding {
+  padding: 40px;
+}
+
+.content {
+  padding: 0 15px;
+}
+
+body {
+  background-color: $background-color;
+  &.page-template-default:not(#{$artists-page}) {
+    .wrapper {
+      background-color: $accent;
+    }
+    footer {
+      background-color: $background-color;
+    }
+  }
+}
+
+.entry-content,
+.page-entry-content {
+  margin: 0 auto;
+}
+
+.entry-content {
+  max-width: 750px;
+}
+
+// .page-entry-content,
+.topics-page-wrapper,
+.search-term,
+.index-wrapper {
+  padding: 0 40px;
+}
+
+.page-entry-content,
+.topics-page-wrapper,
+.post {
+  padding-bottom: 60px;
+}
+
+.index-wrapper {
+  margin-bottom: 60px;
+}
+
+//
+// UNDER CONSTRUCTION!
+//
+
+// .under-construction-note,
+// .under-construction-layer {
+//   display: none;
+// }
+
+// .under-construction {
+//   body {
+//     overflow: hidden;
+//   }
+
+//   .under-construction-note {
+//     display: block;
+//     position: fixed;
+//     z-index: 10001;
+//     top: 50%;
+//     left: 50%;
+//     width: 75%;
+//     transform: translate(-50%, -50%);
+//   }
+
+//   .under-construction-layer {
+//     display: block;
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 100%;
+//     background: rgba(255, 255, 255, 0.9);
+//     z-index: 10000;
+//   }
+
+//   .brick {
+//     visibility: hidden;
+//     &:after {
+//       content: '';
+//       background: $gray;
+//       width: 100%;
+//       height: 100%;
+//       position: absolute;
+//       top: 0;
+//       left: 0;
+//       visibility: visible;
+//     }
+//   }
+
+//   .page-entry-content,
+//   footer {
+//     * {
+//       visibility: hidden;
+//     }
+//   }
+// }

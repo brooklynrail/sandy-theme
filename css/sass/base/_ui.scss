@@ -1,0 +1,40 @@
+.close-button {
+  position: absolute;
+  top: 43px;
+  right: 40px;
+  cursor: pointer;
+  background: url(../../../images/close_thin.png);
+  background-repeat: no-repeat;
+  background-size: 30px 30px;
+  width: 30px;
+  height: 30px;
+}
+
+.lightbox-open,
+.lightbox-opening {
+  .close-button {
+    top: 47px;
+  }
+}
+
+.search-close {
+  @extend .close-button;
+  top: 50%;
+  right: 0;
+  margin-top: -15px;
+  line-height: 0;
+  font-size: 24px;
+}
+
+.loader {
+  @extend %sans-outline;
+  position: absolute;
+  top: 40px;
+  left: 40px;
+}
+
+.loader-static {
+  position: static;
+  text-align: left;
+  padding: 20px 64px;
+}

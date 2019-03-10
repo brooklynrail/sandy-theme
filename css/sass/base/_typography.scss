@@ -1,0 +1,79 @@
+body {
+  @extend %serif;
+}
+
+p {
+  margin: 0;
+  text-indent: 60px;
+  &:first-of-type {
+    text-indent: 0;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @extend %sans;
+  font-weight: normal;
+}
+
+h1, h2 {
+  @extend %font-huge;
+}
+
+h3 {
+  @extend %font-large;
+}
+
+h4 {
+  @extend %font-medium;
+}
+.medium {
+  @extend %font-medium;
+}
+
+h5 {
+  @extend %font-regular;
+}
+
+h6 {
+  @extend %font-small;
+}
+
+.menu-header a, {
+  @extend %sans-outline;
+  @extend %font-huge;
+  &:hover {
+    @extend %sans-outline-fill;
+  }
+}
+
+.essay-title {
+  @extend %sans-outline;
+}
+
+footer {
+  @extend %font-small;
+}
+
+.outline-font {
+  @extend %sans-outline;
+}
+
+.serif {
+  @extend %serif;
+  @extend %font-regular;
+}
+
+.sans {
+  @extend %sans;
+}
+
+.citation {
+  @extend %serif;
+}
+
+.section-title {
+  margin-top: 80px;
+  &:first-child {
+    margin-top: 0;
+  }
+}

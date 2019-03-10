@@ -1,0 +1,55 @@
+footer {
+
+  @extend %ibfix;
+  padding: 40px 55px 80px;
+  background: $accent;
+  text-align: center;
+
+  .column {
+    @extend %font-small;
+    display: inline-block;
+    text-align: left;
+
+    h4 {
+      margin-bottom: 15px;
+    }
+  }
+
+  .footer-col-1,
+  .footer-col-2 {
+    width: 25%;
+    padding-right: 20px;
+    max-width: 340px;
+
+    h4 {
+      max-width: 200px
+    }
+  }
+
+  .footer-col-1 {
+    h4 {
+    }
+  }
+
+  .footer-col-2 {
+    h4 {
+      max-width: 190px;
+      margin-top: 3px;
+      margin-bottom: 19px;
+    }
+  }
+
+  .footer-col-3 {
+    width: 50%;
+    max-width: 560px;
+  }
+
+  h4 a {
+    font-style: normal;
+  }
+
+  .twitter {
+    margin-right: 20px;
+  }
+
+} // footer

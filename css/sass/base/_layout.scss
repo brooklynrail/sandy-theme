@@ -1,0 +1,87 @@
+// Define Desk layout outside of media query for legacy support.
+%one-sixth-width      { width: $desk_unit * 1; }
+%one-quarter-width    { width: $desk_unit * 1.5; }
+%one-third-width      { width: $desk_unit * 2; }
+%one-half-width       { width: $desk_unit * 3; }
+%two-thirds-width     { width: $desk_unit * 4; }
+%three-quarters-width { width: $desk_unit * 4.5; }
+%five-sixths-width    { width: $desk_unit * 5; }
+%full-width           { width: $desk_unit * 6; margin-left: auto; margin-right: auto; }
+%extended-width       { max-width: $desk_unit * 8; margin-left: auto; margin-right: auto; }
+
+%with-gutters { padding-left: $gutter; padding-right: $gutter; }
+%no-gutters { padding-left: 0; padding-right: 0; }
+
+@mixin default_full(){
+  margin-left: auto; margin-right: auto;
+}
+
+@mixin device_grid($breakpoint, $max, $unit, $min:"") {
+  @if $breakpoint == 'hand' {
+    @media only screen and (min-width: #{$min}) and (max-width: $max) {
+      %one-sixth-width      { width: $unit; padding-left: $gutter; padding-right: $gutter; }
+      %one-quarter-width    { width: $unit; padding-left: $gutter; padding-right: $gutter; }
+      %one-third-width      { width: $unit; padding-left: $gutter; padding-right: $gutter; }
+      %one-half-width       { width: $unit; padding-left: $gutter; padding-right: $gutter; }
+      %two-thirds-width     { width: $unit; padding-left: $gutter; padding-right: $gutter; }
+      %three-quarters-width { width: $unit; padding-left: $gutter; padding-right: $gutter; }
+      %five-sixths-width    { width: $unit; padding-left: $gutter; padding-right: $gutter; }
+      %full-width           { width: $unit; @include default_full; padding: $gutter; }
+      %extended-width       { max-width: $unit * 8; @include default_full; }
+      %no-gutters           { padding-left: 0; padding-right: 0; }
+    }
+  } @else if $breakpoint == 'ext' {
+    @media only screen and (min-width: $max) {
+      %one-sixth-width      { width: $unit * 1; padding-left: $gutter; padding-right: $gutter; }
+      %one-quarter-width    { width: $unit * 1.5; padding-left: $gutter; padding-right: $gutter; }
+      %one-third-width      { width: $unit * 2; padding-left: $gutter; padding-right: $gutter; }
+      %one-half-width       { width: $unit * 3; padding-left: $gutter; padding-right: $gutter; }
+      %two-thirds-width     { width: $unit * 4; padding-left: $gutter; padding-right: $gutter; }
+      %three-quarters-width { width: $unit * 4.5; padding-left: $gutter; padding-right: $gutter; }
+      %five-sixths-width    { width: $unit * 5; padding-left: $gutter; padding-right: $gutter; }
+      %full-width           { width: $unit * 6; @include default_full; }
+      %extended-width       { max-width: $unit * 8; @include default_full; }
+      %no-gutters           { padding-left: 0; padding-right: 0; }
+    }
+  } @else {
+    @media only screen and (min-width: #{$min}) and (max-width: $max) {
+      %one-sixth-width      { width: $unit * 1; padding-left: $gutter; padding-right: $gutter; }
+      %one-quarter-width    { width: $unit * 1.5; padding-left: $gutter; padding-right: $gutter; }
+      %one-third-width      { width: $unit * 2; padding-left: $gutter; padding-right: $gutter; }
+      %one-half-width       { width: $unit * 3; padding-left: $gutter; padding-right: $gutter; }
+      %two-thirds-width     { width: $unit * 4; padding-left: $gutter; padding-right: $gutter; }
+      %three-quarters-width { width: $unit * 4.5; padding-left: $gutter; padding-right: $gutter; }
+      %five-sixths-width    { width: $unit * 5; padding-left: $gutter; padding-right: $gutter; }
+      %full-width           { width: $unit * 6; @include default_full; }
+      %extended-width       { max-width: $unit * 8; @include default_full; }
+      %no-gutters           { padding-left: 0; padding-right: 0; }
+    }
+  }
+}
+
+// Establish layout engine.
+@include device_grid('ext',  $ext_min,  $ext_unit             ); // Breakpoint: Extended
+@include device_grid('desk', $desk_max, $desk_unit, $desk_min ); // Breakpoint: Desktop
+@include device_grid('tab',  $tab_max,  $tab_unit,  $tab_min  ); // Breakpoint: Tablet
+@include device_grid('hand', $hand_max, $hand_unit, $hand_min ); // Breakpoint: Hand
+
+// Breakpoint mixins. Usage: @include media(hand){}
+@mixin media($type) {
+  @if $type == ext {
+  @media only screen and (min-width: $ext_min) { @content; }
+  } @else if $type == desk {
+  @media only screen and (min-width: $desk_min) and (max-width: $desk_max) { @content; }
+  } @else if $type == tab {
+  @media only screen and (min-width: $tab_min)  and (max-width: $tab_max)  { @content; }
+  } @else if $type == hand {
+  @media only screen and (min-width: $hand_min) and (max-width: $hand_max) { @content; }
+  }
+}
+
+.one-sixth-width   { @extend %one-sixth-width; }
+.one-third-width   { @extend %one-third-width; }
+.one-half-width    { @extend %one-half-width; }
+.two-thirds-width  { @extend %two-thirds-width; }
+.five-sixths-width { @extend %five-sixths-width; }
+.full-width        { @extend %full-width; }
+.extended-width    { @extend %extended-width; }

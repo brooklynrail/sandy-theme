@@ -1,0 +1,71 @@
+//
+// Variables
+//
+
+// Sizing
+$gutter:  10px;
+$gutters: $gutter * 2;
+$indent: 25px;
+
+$tiny:    5px;
+$small:   10px;
+$xsmall:  20px;
+$medium:  30px;
+$xmedium: 40px;
+$large:   60px;
+$xlarge:  90px;
+
+// Colors
+$background-color: #FFF;
+$gray: #B2B2B2;
+$gray-light: #F1F1F1;
+$accent: $gray-light;
+$yellow: #FAD858;
+
+// Fonts
+$font-tiny:    12px;
+$font-small:   16px;
+$font-regular: 18px;
+$font-medium:  33px;
+$font-large:   40px;
+$font-huge:    72px;
+
+//
+// Breakpoints
+//
+
+$columns: 6;
+$unit_size: 210px;
+$desk_offset: 40;
+$tab_offset: 40;
+
+// Breakpoint: Extended
+$ext_unit:  $unit_size; // 262
+$ext_min:   $ext_unit * $columns + $gutters; // 1280
+
+// Breakpoint: Desktop
+$desk_unit: $ext_unit - $desk_offset;
+$desk_min:  $desk_unit * $columns + $gutters; // 1040
+$desk_max:  $ext_min - 1; // 1279
+
+// Breakpoint: Tablet
+$tab_unit:  $desk_unit - $tab_offset;
+$tab_min:   $tab_unit * $columns + $gutters; // 800
+$tab_max:   $desk_min - 1; // 1039
+
+// Breakpoint: Hand
+$hand_unit: 100%;
+$hand_min:  0; // 0
+$hand_max:  $tab_min - 1; // 799
+
+//
+// Wordpress unique IDs
+//
+
+
+// Pages
+$artists-page: '.page-id-5';
+
+// Menus
+$topics-menu-item: '.menu-item-21';
+$search-menu-item: '.menu-item-57';
